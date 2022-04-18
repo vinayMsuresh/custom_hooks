@@ -6,6 +6,9 @@ import Sucess from './svg/Sucess';
 import usePageBottom from './utils/usePageBottom';
 import useWindowSize from './utils/useWindowSize';
 import useDeviceDetect from './utils/useDeviceDetect';
+import CounterOne from './components/CounterOne';
+import CounterTwo from './components/CounterTwo';
+import FormInput from './components/FormInput';
 function App() {
   const [text] = useState("Hi I'am Vinay");
   const bottom = usePageBottom();
@@ -19,7 +22,13 @@ function App() {
   },[bottom, width, height, mobile])
   return (
     <div className="App">
-      <p style={{display:'inline',margin:10}}>{text}</p>
+
+    <FormInput/>
+
+
+      {/* <CounterOne /> */}
+      {/* <CounterTwo/> */}
+      {/* <p style={{display:'inline',margin:10}}>{text}</p>
      <CopyButton code={text} />
     {!mobile && <Sucess />}<h2>
      Community guidelines exist to support the healthy and open discussion that has always been a part of our culture. They help create an environment where we can come together as a community in pursuit of our shared mission and serve our users. Working at Google comes with tremendous responsibility. Billions of people rely on us every day for high-quality, reliable information. It’s critical that we honor that trust and uphold the integrity of our products and services. The following guidelines are official policy and apply when you’re communicating in the workplace.
@@ -59,7 +68,7 @@ Subject to local laws and policies, Googlers and our extended workforce may comm
 
      </h2>
      {width > 1000 && <h2>Hi I'am in big screen</h2>} 
-     
+      */}
     </div>
   );
 }
